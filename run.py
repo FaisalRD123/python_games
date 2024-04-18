@@ -50,3 +50,25 @@ def signup():
 
     print("Invalid username or password.")
     return False   
+
+# First game: Guess the number
+def guess_the_number():
+    print("Welcome to Guess the Number!")
+    number = random.randint(1, 100)
+    tries = 0
+
+# Using the while loop so the user can try as much as they want.
+    while True:
+        try:
+            guess = int(input("Guess the number (between 1 and 100): "))
+            attempts += 1
+            if guess < number:
+                print("Too low!")
+            elif guess > number:
+                print("Too high!")
+            else:
+                print(f"Congratulations! You guessed {number} in {attempts} tries.")
+                break
+# Except handler in case the input is not a number                
+        except ValueError:
+            print("Please enter a valid number.")
