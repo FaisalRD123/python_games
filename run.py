@@ -22,8 +22,31 @@ def signup():
     print("Welcome to the game! Please sign up to continue.")
     username = input("Enter a username: ")
     password = input("Enter a password: ")
-    # Appending username and password in a row in thegoogle sheet.
+    # Appending username and password in a row in the google sheet.
     SHEET.append_row([username, password])
     print("Sign up successful!")
 
-    
+ def login():
+    print("Welcome back! Please login to continue.")
+    # Added .strip to remove any space between names
+    username = input("Enter your username: ").strip()
+    password = input("Enter your password: ").strip()
+
+    # To get the dimensions of the spreadsheet
+    rows = SHEET.row_count
+    cols = SHEET.col_count
+
+    # Iterating over each row to find the matching username and password
+
+    for row in range(2, rows + 1):  # Start from row 2 to skip the first row as it contains the headers
+
+        stored_username = SHEET.cell(row, 1).value.strip()  # Username column
+        stored_password = SHEET.cell(row, 2).value.strip()  # Password column
+
+    # True condition if both input matches the data in the spread_sheet
+        if stored_username == username and stored_password == password:
+            print("Login successful!")
+            return True
+
+    print("Invalid username or password.")
+    return False   
