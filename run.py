@@ -14,7 +14,7 @@ CREDS = Credentials.from_service_account_file('creds.json')
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('python_games').sheet1
-# Opening google sheet witht the name python_games
+# Opening google sheet with the name python_games and storing it into SHEET variable.
 
 
 # Sign up Page. Comparing username and password with the column 'Username' and 'Password' from google sheet.
@@ -22,5 +22,8 @@ def signup():
     print("Welcome to the game! Please sign up to continue.")
     username = input("Enter a username: ")
     password = input("Enter a password: ")
+    # Appending username and password in a row in thegoogle sheet.
     SHEET.append_row([username, password])
     print("Sign up successful!")
+
+    
