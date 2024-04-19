@@ -22,35 +22,57 @@ def signup():
     print("Welcome to the game! Please sign up to continue.")
     username = input("Enter a username: ")
     password = input("Enter a password: ")
-    # Appending username and password in a row in the google sheet.
-    SHEET.append_row([username, password])
+    SHEET.append_row([username, password]) # Appending username and password in a row in the google sheet.
     print("Sign up successful!")
+
+# Fetch user records from the spreadsheet and store them in a dictionary
+def fetch_user_records():
+    users = {}
+    rows = SHEET.get_all_values()
+    for row in rows[1:]:  # Start from the second row to skip the header
+        username = row[0].strip()  # Username is in the first column
+        password = row[1].strip()  # Password is in the second column
+        users[username] = password
+    return users
+
+# Global variable to store user records
+USERS = fetch_user_records()
 
 def login():
     print("Welcome back! Please login to continue.")
-    # Added .strip to remove any space between names
+    
+    # Get username input and strip leading/trailing whitespace
     username = input("Enter your username: ").strip()
+    
+    # Get password input and strip leading/trailing whitespace
     password = input("Enter your password: ").strip()
 
-    # To get the dimensions of the spreadsheet
+    # Get the dimensions of the spreadsheet
     rows = SHEET.row_count
     cols = SHEET.col_count
 
-    # Iterating over each row to find the matching username and password
+    # Iterate over each row to find the matching username and password
+    for row in range(2, rows + 1):  # Start from row 2 to skip header row
+    
+        # Get the stored username and password from the spreadsheet
+        stored_username_cell = SHEET.cell(row, 1)
+        stored_password_cell = SHEET.cell(row, 2)
 
-    for row in range(2, rows + 1):  # Start from row 2 to skip the first row as it contains the headers
+        # Check if the cell values are not None before stripping
+        if stored_username_cell.value is not None and stored_password_cell.value is not None:
+            # Strip leading/trailing whitespace from the stored username and password
+            stored_username = stored_username_cell.value.strip()
+            stored_password = stored_password_cell.value.strip()
 
-        stored_username = SHEET.cell(row, 1).value.strip()  # Username column
-        stored_password = SHEET.cell(row, 2).value.strip()  # Password column
+            # Check if the entered username and password match any user records
+            if stored_username == username and stored_password == password:
+                # If match found, print login successful message and return True
+                print("Login successful!")
+                return True
 
-    # True condition if both input matches the data in the spread_sheet
-        if stored_username == username and stored_password == password:
-            print("Login successful!")
-            return True
-
+    # If no match found, print invalid username or password message and return False
     print("Invalid username or password.")
-    return False   
-
+    return False
 
 # First game: Guess the number
 def guess_the_number():
