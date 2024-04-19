@@ -107,3 +107,28 @@ def rock_paper_scissors():
         except KeyboardInterrupt:
             print("\nThanks for playing Rock, Paper, Scissors!")
             break
+
+
+# Main Function
+def main():
+
+# Using the while loop so the user can try as much as they want.
+    while True:
+
+# Choices once the user logged in
+
+        print("\nSelect a game:")
+        print("1. Guess the Number")
+        print("2. Rock, Paper, Scissors")
+        print("3. Exit")
+        choice = input("Enter your choice (1, 2, or 3): ")
+
+        if choice == '1':
+            guess_the_number()
+        elif choice == '2':
+            rock_paper_scissors()
+        elif choice == '3':
+            print("Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please enter 1, 2, or 3.")
