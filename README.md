@@ -1,14 +1,14 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
 Welcome,
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+## Python Games
 
-## Reminders
-
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+- There are 2 different games in this project.
+- 1st game is Guess a number
+   - In this game, the user has unlimited tries to guess a pre-determined random number between 1 and 100.
+   - If the guess is higher than the random number, the game will tell you that it is too high.
+   - If the guess is lower than the random number, the game will tell you that it is too low.
+   - It will keep going on until user guess the correct number.
+- 2nd game is Rock Paper Scissors, a classic that doesn't need any introduction.
 
 ## Creating the Heroku app
 
