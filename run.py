@@ -55,7 +55,7 @@ def login():
 def guess_the_number():
     print("Welcome to Guess the Number!")
     number = random.randint(1, 100)
-    tries = 0
+    attempts = 0
 
 # Using the while loop so the user can try as much as they want.
     while True:
@@ -64,9 +64,9 @@ def guess_the_number():
 
 # Condition in case the input in not in the given range
 
-             if guess < 1 or guess > 100:
-                print("Please enter a number between 1 and 100.")
-                continue
+            if guess < 1 or guess > 100:
+              print("Please enter a number between 1 and 100.")
+              continue
 
             attempts += 1
             if guess < number:
