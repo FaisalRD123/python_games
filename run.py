@@ -26,7 +26,7 @@ def signup():
     SHEET.append_row([username, password])
     print("Sign up successful!")
 
- def login():
+def login():
     print("Welcome back! Please login to continue.")
     # Added .strip to remove any space between names
     username = input("Enter your username: ").strip()
@@ -63,7 +63,7 @@ def guess_the_number():
             guess = int(input("Guess the number (between 1 and 100): "))
 
 # Condition in case the input in not in the given range
-            
+
              if guess < 1 or guess > 100:
                 print("Please enter a number between 1 and 100.")
                 continue
