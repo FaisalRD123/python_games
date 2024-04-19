@@ -72,3 +72,38 @@ def guess_the_number():
 # Except handler in case the input is not a number                
         except ValueError:
             print("Please enter a valid number.")
+
+# First game: Rock Paper Scissor
+
+def rock_paper_scissors():
+    print("Welcome to Rock, Paper, Scissors!")
+
+# List of available choices
+    choices = ['rock', 'paper', 'scissors']
+    while True:
+        try:
+
+# Input for choices. .lower() function to avoid so the input can be only small alphabet + no symbols or chracters.
+            user_choice = input("Enter your choice (rock, paper, or scissors): ").lower()
+            computer_choice = random.choice(choices)
+            print(f"Computer chooses: {computer_choice}")
+
+# Condition if the user choice is not in the list.
+            if user_choice not in choices:
+                print("Invalid choice. Please enter rock, paper, or scissors.")
+# Tie condition
+            elif user_choice == computer_choice:
+                print("It's a tie!")
+
+# Win condition
+            elif (user_choice == 'rock' and computer_choice == 'scissors') or \
+                    (user_choice == 'paper' and computer_choice == 'rock') or \
+                    (user_choice == 'scissors' and computer_choice == 'paper'):
+                print("You win!")
+            else:
+                print("Computer wins!")
+            break
+# Except handler in case user presses ctrl + C.
+        except KeyboardInterrupt:
+            print("\nThanks for playing Rock, Paper, Scissors!")
+            break
