@@ -148,7 +148,7 @@ if __name__ == "__main__":
         print("1. Sign Up")
         print("2. Login")
         print("3. Exit")
-        option = input("Enter your option : (1, 2, or 3):  ")
+        option = input("Enter your option : (1, 2, or 3):\n  ")
 
         if option == '1': # 1st Choice: Sign up
             signup()
