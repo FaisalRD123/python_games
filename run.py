@@ -38,6 +38,7 @@ def fetch_user_records():
 # Global variable to store user records
 USERS = fetch_user_records()
 
+# Login function
 def login():
     print("Welcome back! Please login to continue.")
     
@@ -47,33 +48,18 @@ def login():
     # Get password input and strip leading/trailing whitespace
     password = input("Enter your password: ").strip()
 
-    # Get the dimensions of the spreadsheet
-    rows = SHEET.row_count
-    cols = SHEET.col_count
+    # Check if the entered username exists in the stored user records
+    if username in USERS:
+        # If username exists, check if the entered password matches the stored password
+        if USERS[username] == password:
+            print("Login successful!")
+            return True
+        else:
+            print("Invalid password.")
+    else:
+        print("Invalid username.")
 
-    # Iterate over each row to find the matching username and password
-    for row in range(2, rows + 1):  # Start from row 2 to skip header row
-    
-        # Get the stored username and password from the spreadsheet
-        stored_username_cell = SHEET.cell(row, 1)
-        stored_password_cell = SHEET.cell(row, 2)
-
-        # Check if the cell values are not None before stripping
-        if stored_username_cell.value is not None and stored_password_cell.value is not None:
-            # Strip leading/trailing whitespace from the stored username and password
-            stored_username = stored_username_cell.value.strip()
-            stored_password = stored_password_cell.value.strip()
-
-            # Check if the entered username and password match any user records
-            if stored_username == username and stored_password == password:
-                # If match found, print login successful message and return True
-                print("Login successful!")
-                return True
-
-    # If no match found, print invalid username or password message and return False
-    print("Invalid username or password.")
     return False
-
 # First game: Guess the number
 def guess_the_number():
     print("Welcome to Guess the Number!")
