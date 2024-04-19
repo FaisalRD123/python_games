@@ -18,19 +18,33 @@ SHEET = GSPREAD_CLIENT.open('python_games').sheet1
 
 
 # Sign up Page. Comparing username and password with the column 'Username' and 'Password' from google sheet.
+# Fetch user records from the spreadsheet and store them in a dictionary
+def fetch_user_records():
+    users = {}
+    rows = SHEET.get_all_values()
+    for row in rows[1:]:  # Start from the second row to skip the header
+        username = row[0].strip()  # Username is in the first column
+        password = row[1].strip()  # Password is in the second column
+        users[username] = password
+    return users
+
+# Global variable to store user records
+USERS = fetch_user_records()
+
+# Signup function
 def signup():
     print("Sign Up")
     
-    # Get username input and removing whitespace
+    # Get username input and striping the whitespace
     username = input("Enter your username: ").strip()
     
-    # Get password input and removing whitespace
+    # Get password input and striping the whitespace
     password = input("Enter your password: ").strip()
 
     # Fetch user records from the spreadsheet
     rows = SHEET.get_all_values()
 
-    # Checking to see if the username already exists in the spreadsheet
+    # Check if the username already exists in the spreadsheet
     existing_usernames = [row[0].strip() for row in rows[1:]]  # Skiping the header row
     if username in existing_usernames:
         print("Username already exists. Please choose a different username.")
@@ -40,8 +54,13 @@ def signup():
     new_row = [username, password]
     SHEET.append_row(new_row)
     print("Sign up successful!")
+
+    # Add new user to the globally stored USERS dictionary
+    USERS[username] = password
+    
     return True
 
+    
 # Login function
 def login():
     print("Welcome back! Please login to continue.")
