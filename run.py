@@ -135,7 +135,7 @@ def main():  # Main Function
         elif choice == '2':
             rock_paper_scissors()
         elif choice == '3':
-            print("Goodbye!")
+            print("Thank you for playing!")
             break
         else:
             print("Invalid choice. Please enter 1, 2, or 3.")
@@ -148,7 +148,7 @@ if __name__ == "__main__":
         print("1. Sign Up")
         print("2. Login")
         print("3. Exit")
-        option = input("Enter your option : 1, 2, or 3 ")
+        option = input("Enter your option : (1, 2, or 3):  ")
 
         if option == '1': # 1st Choice: Sign up
             signup()
@@ -158,7 +158,7 @@ if __name__ == "__main__":
                 main()
                 break
         elif option == '3':
-            print("Thank you for playing!")
+            print("Exit!")
             break
         else:
             print("Invalid option. Please enter 1, 2, or 3.")
