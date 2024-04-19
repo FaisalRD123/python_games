@@ -132,3 +132,28 @@ def main():
             break
         else:
             print("Invalid choice. Please enter 1, 2, or 3.")
+
+if __name__ == "__main__":
+
+# Using the while loop so the user can try as much as they want.
+    while True:
+        print("\nSelect an option:")
+        print("1. Sign Up")
+        print("2. Login")
+        print("3. Exit")
+        option = input("Enter your option (1, 2, or 3): ")
+
+# 1st Choice: Sign up
+        if option == '1':
+            signup()
+            
+# 2nd Choice: Login           
+        elif option == '2':
+            if login():
+                main()
+                break
+        elif option == '3':
+            print("Goodbye!")
+            break
+        else:
+            print("Invalid option. Please enter 1, 2, or 3.")
