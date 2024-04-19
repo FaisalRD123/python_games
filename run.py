@@ -61,6 +61,13 @@ def guess_the_number():
     while True:
         try:
             guess = int(input("Guess the number (between 1 and 100): "))
+
+# Condition in case the input in not in the given range
+            
+             if guess < 1 or guess > 100:
+                print("Please enter a number between 1 and 100.")
+                continue
+
             attempts += 1
             if guess < number:
                 print("Too low!")
@@ -146,7 +153,7 @@ if __name__ == "__main__":
 # 1st Choice: Sign up
         if option == '1':
             signup()
-            
+
 # 2nd Choice: Login           
         elif option == '2':
             if login():
