@@ -20,7 +20,7 @@ SHEET = GSPREAD_CLIENT.open('python_games').sheet1
 # Sign up Page. Comparing username and password with the column 'Username' and 'Password' from google sheet.
 def signup():
     print("Welcome to the game! Please sign up to continue.")
-    username = input("Enter a username: ")
+    username = input("\nEnter a username: ")
     password = input("Enter a password: ")
     SHEET.append_row([username, password]) # Appending username and password in a row in the google sheet.
     print("Sign up successful!")
@@ -62,7 +62,7 @@ def login():
     return False
 # First game: Guess the number
 def guess_the_number():
-    print("Welcome to Guess the Number!")
+    print("Welcome to guess the number game!")
     number = random.randint(1, 100)
     attempts = 0
 
@@ -158,7 +158,7 @@ if __name__ == "__main__":
         print("1. Sign Up")
         print("2. Login")
         print("3. Exit")
-        option = input("Enter your option (1, 2, or 3): ")
+        option = input("Enter your option : 1, 2, or 3 ")
 
 # 1st Choice: Sign up
         if option == '1':
@@ -170,7 +170,7 @@ if __name__ == "__main__":
                 main()
                 break
         elif option == '3':
-            print("Goodbye!")
+            print("Thank you for playing!")
             break
         else:
             print("Invalid option. Please enter 1, 2, or 3.")
