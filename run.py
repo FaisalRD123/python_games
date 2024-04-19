@@ -88,32 +88,33 @@ def rock_paper_scissors():
 # List of available choices
     choices = ['rock', 'paper', 'scissors']
     while True:
-        try:
 
-# Input for choices. .lower() function to avoid so the input can be only small alphabet + no symbols or chracters.
-            user_choice = input("Enter your choice (rock, paper, or scissors): ").lower()
-            computer_choice = random.choice(choices)
-            print(f"Computer chooses: {computer_choice}")
+# User input. .lower() method so the input stays in lower alphabet + no symbols and characters.
+        user_choice = input("Enter your choice (rock, paper, or scissors): ").lower()
 
-# Condition if the user choice is not in the list.
-            if user_choice not in choices:
-                print("Invalid choice. Please enter rock, paper, or scissors.")
+# Randon choice given to computer. Imported from random 
+
+        computer_choice = random.choice(choices)
+        print(f"Computer chooses: {computer_choice}")
+
+        if user_choice in choices:
+
 # Tie condition
-            elif user_choice == computer_choice:
+            if user_choice == computer_choice:
                 print("It's a tie!")
 
 # Win condition
             elif (user_choice == 'rock' and computer_choice == 'scissors') or \
-                    (user_choice == 'paper' and computer_choice == 'rock') or \
-                    (user_choice == 'scissors' and computer_choice == 'paper'):
+                 (user_choice == 'paper' and computer_choice == 'rock') or \
+                 (user_choice == 'scissors' and computer_choice == 'paper'):
                 print("You win!")
             else:
                 print("Computer wins!")
             break
-# Except handler in case user presses ctrl + C.
-        except KeyboardInterrupt:
-            print("\nThanks for playing Rock, Paper, Scissors!")
-            break
+# In case the input is wrong 
+
+        else:
+            print("Invalid choice. Please enter rock, paper, or scissors.")
 
 
 # Main Function
