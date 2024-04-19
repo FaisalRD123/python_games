@@ -20,8 +20,8 @@ SHEET = GSPREAD_CLIENT.open('python_games').sheet1
 # Sign up Page. Comparing username and password with the column 'Username' and 'Password' from google sheet.
 def signup():
     print("Welcome to the game! Please sign up to continue.")
-    username = input("\nEnter a username: ")
-    password = input("Enter a password: ")
+    username = input("Enter a username:\n ")
+    password = input("Enter a password:\n ")
     SHEET.append_row([username, password]) # Appending username and password in a row in the google sheet.
     print("Sign up successful!")
 
@@ -42,11 +42,11 @@ USERS = fetch_user_records()
 def login():
     print("Welcome back! Please login to continue.")
     
-    # Get username input and strip leading/trailing whitespace
-    username = input("Enter your username: ").strip()
+    # Get username input and strip leading whitespace
+    username = input("Enter your username:\n ").strip()
     
-    # Get password input and strip leading/trailing whitespace
-    password = input("Enter your password: ").strip()
+    # Get password input and strip leading whitespace
+    password = input("Enter your password:\n ").strip()
 
     # Check if the entered username exists in the stored user records
     if username in USERS:
@@ -69,7 +69,7 @@ def guess_the_number():
 # Using the while loop so the user can try as much as they want.
     while True:
         try:
-            guess = int(input("Guess the number (between 1 and 100): "))
+            guess = int(input("Guess the number (between 1 and 100):\n "))
 
 # Condition in case the input in not in the given range
 
@@ -89,13 +89,9 @@ def guess_the_number():
         except ValueError:
             print("Please enter a valid number.")
 
-# First game: Rock Paper Scissor
-
-def rock_paper_scissors():
+def rock_paper_scissors(): # First game: Rock Paper Scissor
     print("Welcome to Rock, Paper, Scissors!")
-
-# List of available choices
-    choices = ['rock', 'paper', 'scissors']
+    choices = ['rock', 'paper', 'scissors']  # List of available choices
     while True:
 
 # User input. .lower() method so the input stays in alphabet + no symbols and characters.
@@ -108,8 +104,7 @@ def rock_paper_scissors():
 
         if user_choice in choices:
 
-# Tie condition
-            if user_choice == computer_choice:
+            if user_choice == computer_choice:  # Tie condition
                 print("It's a tie!")
 
 # Win condition
@@ -119,26 +114,21 @@ def rock_paper_scissors():
                 print("You win!")
             else:
                 print("Computer wins!")
-            break
-# In case the input is wrong 
-
-        else:
+            break 
+        else:   # In case the input is wrong 
             print("Invalid choice. Please enter rock, paper, or scissors.")
 
-
-# Main Function
-def main():
+def main():  # Main Function
 
 # Using the while loop so the user can try as much as they want.
     while True:
 
 # Choices once the user logged in
-
         print("\nSelect a game:")
         print("1. Guess the Number")
         print("2. Rock, Paper, Scissors")
         print("3. Exit")
-        choice = input("Enter your choice (1, 2, or 3): ")
+        choice = input("Enter your choice (1, 2, or 3):\n ")
 
         if choice == '1':
             guess_the_number()
@@ -160,12 +150,10 @@ if __name__ == "__main__":
         print("3. Exit")
         option = input("Enter your option : 1, 2, or 3 ")
 
-# 1st Choice: Sign up
-        if option == '1':
+        if option == '1': # 1st Choice: Sign up
             signup()
-
-# 2nd Choice: Login           
-        elif option == '2':
+        
+        elif option == '2':  # 2nd Choice: Login   
             if login():
                 main()
                 break
