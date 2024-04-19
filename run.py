@@ -51,6 +51,7 @@ def login():
     print("Invalid username or password.")
     return False   
 
+
 # First game: Guess the number
 def guess_the_number():
     print("Welcome to Guess the Number!")
@@ -89,7 +90,7 @@ def rock_paper_scissors():
     choices = ['rock', 'paper', 'scissors']
     while True:
 
-# User input. .lower() method so the input stays in lower alphabet + no symbols and characters.
+# User input. .lower() method so the input stays in alphabet + no symbols and characters.
         user_choice = input("Enter your choice (rock, paper, or scissors): ").lower()
 
 # Randon choice given to computer. Imported from random 
