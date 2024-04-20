@@ -95,7 +95,6 @@ Welcome,
 - Google OAuth was used to connect the project with the google account.
 
 ### Manual Testing
-<details><summary>See user stories testing</summary>
 
 1. I want to be able to have an option as sign up or login.
 
