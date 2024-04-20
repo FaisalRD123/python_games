@@ -35,17 +35,17 @@ USERS = fetch_user_records()
 def signup():
     print("Sign Up")
     
-    # Get username input and striping the whitespace
+    # Get username input and strip leading/trailing whitespace
     username = input("Enter your username: ").strip()
     
-    # Get password input and striping the whitespace
+    # Get password input and strip leading/trailing whitespace
     password = input("Enter your password: ").strip()
 
     # Fetch user records from the spreadsheet
     rows = SHEET.get_all_values()
 
     # Check if the username already exists in the spreadsheet
-    existing_usernames = [row[0].strip() for row in rows[1:]]  # Skiping the header row
+    existing_usernames = [row[0].strip() for row in rows[1:]]  # Skip header row
     if username in existing_usernames:
         print("Username already exists. Please choose a different username.")
         return False
