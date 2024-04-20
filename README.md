@@ -169,3 +169,12 @@ Welcome,
     <img src="assets/exit.PNG" alt="Exit">      
 </details> 
 
+## Testing
+
+ - Tested the code on Pep8 and found no errors.
+ - Test manually by entering incorrect numbers, out of range numbers, alphabets and characters and it worked fine.
+
+## Testing on Browsers
+
+  - I tested that this game works in 2 browsers - Chrome and Safari and was able to deploy successfully on both of them.
+
