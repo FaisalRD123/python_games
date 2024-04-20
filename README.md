@@ -180,21 +180,21 @@ Welcome,
 
   - I tested that this game works in 2 browsers - Chrome and Safari and was able to deploy successfully on both of them.
 
-## Bug and Fixes
+# Bug and Fixes
 
-# Bug
+### Bug
  - The User could put the same name as one stored in the spreadsheet and it will still sign up.
-# Fix
+### Fix
  - Fetch the data from the spreadsheet, stored in a new variable and compare with the input data. So the user cannot sign up with the same name.
 
-# Bug
+### Bug
  - The User could not login in.
-# Fix
+### Fix
  - Used the strip function to remove extra spaces while comparing with user data to the data stored in the spread sheet.
 
-# Bug
+### Bug
  - The User could enter any integar while the game was guess a number between 1 and 100.
-# Fix
+### Fix
  - Used the if condition to see if the number is less than 100 and more than 1.
 
 ## Deployment
