@@ -10,7 +10,7 @@ Welcome,
    - It will keep going on until user guess the correct number.
 - 2nd game is Rock Paper Scissors, a classic that doesn't need any introduction.
 
-## ## Project Goals
+## Project Goals
 ### User Stories
 
 - Play both games.
