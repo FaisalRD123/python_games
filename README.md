@@ -172,6 +172,9 @@ Welcome,
 ## Testing
 
  - Tested the code on Pep8 and found no errors.
+   <p>Validating the code</p>
+    <img src="assets/validator.PNG" alt="Code Validator">      
+
  - Test manually by entering incorrect numbers, out of range numbers, alphabets and characters and it worked fine.
 
 ## Testing on Browsers
