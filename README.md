@@ -1,5 +1,6 @@
 Welcome,
 
+[Link to the website](https://dashboard.heroku.com/apps/python-games/deploy/github)
 ## Python Games
 
 - There are 2 different games in this project.
