@@ -97,73 +97,51 @@ Welcome,
 ### Manual Testing
 <details><summary>See user stories testing</summary>
 
-1. I want to be able to have an option as existing user or new user
+1. I want to be able to have an option as sign up or login.
 
-| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
-| ------------- | ----------------------------- | ---------------------------- | ----------------- |
-| Are you an existing user | Type Y/N | Y: Open login area / N: SignUp Area | Works as expected
 <details>
     <summary>Screenshots</summary>
-    <p>Sign Up</p>
-    <img src="assets/screenshots/ustory1-signup.png" alt="Sign up area">
-    <p>Log In</p>
-    <img src="assets/screenshots/ustory1-login.png" alt="Login area">
+    <p>Sign Up Successful</p>
+    <img src="assets/main.PNG" alt="Main Options">
 </details> 
 
 2. I want to able to signup as new user
+    
 
-| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
-| ------------- | ----------------------------- | ---------------------------- | ----------------- |
-| Sign Up Here | Enter New Username/ Enter New Password | Sign Up Complete : Login Page opens | Works as expected
 <details>
     <summary>Screenshots</summary>
-    <p>Sign Up Area</p>
-    <img src="assets/screenshots/signup.png" alt="Sign up area">
-    <p>Login area opens after sign up is confirmed</p>
-    <img src="assets/screenshots/userstory2.png" alt="Login area">
+    <p>Sign Up Successful</p>
+    <img src="assets/signup_successful.PNG" alt="Sign up area">
+    <p>Sign Up Unsuccessful</p>
+    <img src="assets/signup_username_already_exists.PNG" alt="Sign up area">
 </details> 
 
 3. I want to be able to log-in if I return to the game
 
-| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
-| ------------- | ----------------------------- | ---------------------------- | ----------------- |
-| Login To Play Hangman | Username/ Password | Login Successful : Open rules | Works as expected
-
 <details>
-    <summary>Screenshots</summary>
-    <p>Log In Area</p>
-    <img src="assets/screenshots/ustory1-login.png" alt="Login area">   
-    <p>Open rules is prompted after login is successful</p>
-    <img src="assets/screenshots/ustory3.png" alt="Open rules">
+    <p>Login Unsuccessful</p>
+    <img src="assets/login_invalid _username.PNG" alt="Login area">
+    <p>Login Successful</p>
+    <img src="assets/successful_login.PNG" alt="Login area">
 </details> 
 
-4. I want to be able to read the rules of the game
+4. I want to be able to see the games option after successful login.
 
-| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
-| ------------- | ----------------------------- | ---------------------------- | ----------------- |
-| Open Rules  | Type Y/N| Y: Open rules/ N: Starts Game | Works as expected
 
 <details>
     <summary>Screenshots</summary>   
-    <p>Open rules is prompted</p>
-    <img src="assets/screenshots/ustory3.png" alt="Open rules">
-    <p>If user input is "Y"</p>
-    <img src="assets/screenshots/rules.png" alt="Rules of the game">
-    <p>If user input is "N"</p>
-    <img src="assets/screenshots/gamestart.png" alt="Game started">
+    <p>Games Options</p>
+    <img src="assets/games_option.PNG" alt="Games Option">   
 </details> 
 
-5. I want to be able to restart game when I'm logged in
+5. I want to be able to play both games and see the expected results
 
-| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
-| ------------- | ----------------------------- | ---------------------------- | ----------------- |
-| Restart Game  | Type Y/N| Y: Game restarts/ N: Game ends, User logged out | Works as expected
 
 <details>
     <summary>Screenshots</summary>   
-    <p>Restart is prompted</p>
-    <img src="assets/screenshots/restartq.png" alt="Restart Question">
-    <p>If user input is "Y"</p>
+    <p>Guess the number. Attempts conditons + win condition.</p>
+    <img src="assets/conditions_tries_number.PNG" alt="1st_game">
+    <p>If the guess is not in the range or if it is not an integar</p>
     <img src="assets/screenshots/restart.png" alt="Game restarts">
     <p>If user input is "N"</p>
     <img src ="assets/screenshots/ustory5.png" alt="Game ends">   
