@@ -97,7 +97,7 @@ Welcome,
 
 ## Flowchart
 
- - I used Lucid Chartand and Figjam for the Flow charts.
+ - I used Lucid Chart and Figjam for the Flow charts.
 
  #### Full Game
   <img src="assets/game.PNG" alt="Game FlowChart">
