@@ -169,9 +169,9 @@ Welcome,
     <img src="assets/exit.PNG" alt="Exit">      
 </details> 
 
-## Testing
+## Validator Testing
 
- - Tested the code on Pep8 and found no errors.
+ - Tested the code on Pep8 (Recommended by code institute) and found no errors.
    <p>Validating the code</p>
     <img src="assets/validator.PNG" alt="Code Validator">      
 
@@ -180,4 +180,37 @@ Welcome,
 ## Testing on Browsers
 
   - I tested that this game works in 2 browsers - Chrome and Safari and was able to deploy successfully on both of them.
+
+## Bug and Fixes
+
+# Bug
+ - The User could put the same name as one stored in the spreadsheet and it will still sign up.
+# Fix
+ - Fetch the data from the spreadsheet, stored in a new variable and compare with the input data. So the user cannot sign up with the same name.
+
+# Bug
+ - The User could not login in.
+# Fix
+ - Used the strip function to remove extra spaces while comparing with user data to the data stored in the spread sheet.
+
+# Bug
+ - The User could enter any integar while the game was guess a number between 1 and 100.
+# Fix
+ - Used the if condition to see if the number is less than 100 and more than 1.
+
+## Deployment
+ - The project was deployed by following these steps (Different from Html and Java Script deployment): 
+   - Create a repository using code institute template.
+   - Make an account on Heroku.
+   - Build packs with the following order: Python, NodeJS.
+   - Updated pack by adding Key: Port and Value: 8000.
+   - Link the Heroku with the repository.
+   - Wait until it builds.
+   - Deploy
+
+## Credits
+ - To my mentor, Mo Shami regarding the project ideas.
+ - Code institute for their thorough guide on Heroku deployment.
+
+
 
