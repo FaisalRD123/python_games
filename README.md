@@ -142,64 +142,30 @@ Welcome,
     <p>Guess the number. Attempts conditons + win condition.</p>
     <img src="assets/conditions_tries_number.PNG" alt="1st_game">
     <p>If the guess is not in the range or if it is not an integar</p>
-    <img src="assets/screenshots/restart.png" alt="Game restarts">
-    <p>If user input is "N"</p>
-    <img src ="assets/screenshots/ustory5.png" alt="Game ends">   
+    <img src="assets/invalid_choice.PNG" alt="Invalid Choice">
+    <p>Rock Paper Scissor Invalid Choice</p>
+    <img src="assets/rps_invalid_choice.PNG" alt="RPS Game"> 
+    <p>Rock Paper Scissor Valid Choice</p>
+    <img src="assets/rps_successful.PNG" alt="RPS Game">  
 </details>
 
-6. I want users to have a positive experience whilst playing the game
-
-| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
-| ------------- | ----------------------------- | ---------------------------- | ----------------- |
-| Across all screen | Simple navigation and game play  | Colored messages and straightforward instructions | Works as expected |
+6. I want users to update spread_sheet up signup
 
 <details>
     <summary>Screenshots</summary>
-    <img src="assets/screenshots/ustory1-signup.png" alt="Sign up area">
-    <img src="assets/screenshots/userstory2.png" alt="Login area">
-    <img src="assets/screenshots/ustory3.png" alt="Open rules"> 
-    <img src="assets/screenshots/restartq.png" alt="Restart Question">
+    <p>Spread_Sheet</p>
+    <img src="assets/spread_sheet.PNG" alt="Spread Sheet">  
+    <p>Updated Spread_Sheet after successful sign up</p>
+    <img src="assets/signup_successful.PNG" alt="Sign up area">
+    <img src="assets/updated_spreadsheet.PNG" alt="Updated Spread Sheet">  
+    
 </details>
 
-7. I want user name and password to be saved to Google Spreadsheet
-
-| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
-| ------------- | ----------------------------- | ---------------------------- | ----------------- |
-| Sign-Up | Users input their name and password which has not been previously registered  | Username and password are saved to Google Spreadsheet| Works as expected |
+7. I want user to exit easily
 
 <details>
     <summary>Screenshots</summary>
-    <p>Google Spread Worksheet</p>
-    <img src="assets/screenshots/worksheet.png" alt="Worksheet">      
+    <p>Exit</p>
+    <img src="assets/exit.PNG" alt="Exit">      
 </details> 
-
-8. I want the user to get errors displayed in case of wrong input
-
- **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
-| ------------- | ----------------------------- | ---------------------------- | ----------------- |
-| Across all screen | User inputs invalid input when questions are prompted. User inputs invalid value during log-in or sign-up | Feedback message displayed to the user | Works as expected |
-
-<details>
-    <summary>Screenshots</summary>
-    <img src="assets/screenshots/us9.png" alt="User Exist area">
-    <img src="assets/screenshots/errorsignup.png" alt="Sign up area">
-    <img src="assets/screenshots/errorlogin.png" alt="Login area">
-    <img src="assets/screenshots/errorrules.png" alt="Open rules"> 
-    <img src="assets/screenshots/errorrestart.png" alt="Restart Question">
-</details>
-
-9. I want data entry to be validated, to guide the user on how to correctly format the input
-
-| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
-| ------------- | ----------------------------- | ---------------------------- | ----------------- |
-| Across all screen | User inputs invalid data | Feedback message with instructions diplayed to the user | Works as expected |
-
-<details>
-    <summary>Screenshots</summary>
-    <img src="assets/screenshots/us9.png" alt="User Exist area">
-    <img src="assets/screenshots/signU9.png" alt="Sign up area">
-    <img src="assets/screenshots/loginUS9.png" alt="Login area">
-    <img src="assets/screenshots/errorrules.png" alt="Open rules"> 
-    <img src="assets/screenshots/errorrestart.png" alt="Restart Question">
-</details>
 
