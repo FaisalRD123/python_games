@@ -59,8 +59,8 @@ Welcome,
 - A welcome message on the screen will be displayed for the users with their name
 - The input goes through a validation process. If the user input is not correct they have an option to try again .
 
-### User Stories
-## Users
+## User Stories
+#### Users
 
 - I want  have an option as an existing user or new user.
 - I want to be able to signup as new user.
@@ -68,34 +68,47 @@ Welcome,
 - I want to be able to log-in if I return to the game.
 - I want to be able to exit.
 
-## Site Owner
+#### Site Owner
 
 - I want users to have a positive experience while playing the game.
 - I want user names and password to be saved to Google Spreadsheet when signing up.
 - I want the user to get errors displayed in case of wrong input.
 - I want data entry to be validated, to guide the user on how to correctly format the input.
 
-### Technology Used
-## Language Used
+## Technology Used
+#### Language Used
 
 - Python.
 
-## Python Libraries used
+#### Python Libraries used
 - GSpread - to connect with google sheets.
 - Random - used to choose random words.
 - Strip - to remove any spaces.
 
-### Other websites/tools used
+#### Other websites/tools used
 
 - GitHub was used for saving and storing files.
 - GitPod was the IDE used for writing code.
 - Heroku was used as the deploying platform for this site.
 
-### 3rd Party Python Libraries used
+#### 3rd Party Python Libraries used
 - Google sheets API was used to store and check the user input and authorize the user identity
 - Google OAuth was used to connect the project with the google account.
 
-### Manual Testing
+## Flowchart
+
+ - I used Lucid Chartand Figjam for the charts.
+
+ #### Full Game
+  <img src="assets/game.PNG" alt="Game FlowChart">
+
+ #### Guess a number
+ <img src="assets/guess_a_number.PNG" alt="Guess a number FlowChart">
+
+  #### Rock Paper Scizzor
+ <img src="assets/rps_diagram.PNG" alt="Rock Paper Scissors FlowChart">
+
+## Manual Testing
 
 1. I want to be able to have an option as sign up or login.
 
@@ -198,15 +211,57 @@ Welcome,
 ### Fix
  - Used the if condition to see if the number is less than 100 and more than 1.
 
+## Code
+#### The following ideas were taken from code institute's Love_sandwich project.
+
+-  validate_user_details function
+-  How to import gspread
+-  How to import Credentials from google.oauth
+
 ## Deployment
- - The project was deployed by following these steps (Different from Html and Java Script deployment): 
-   - Create a repository using code institute template.
-   - Make an account on Heroku.
-   - Build packs with the following order: Python, NodeJS.
-   - Updated pack by adding Key: Port and Value: 8000.
-   - Link the Heroku with the repository.
-   - Wait until it builds.
-   - Deploy
+
+### Deploying the website in Heroko:
+- The website was deployed to Heroko using following steps:
+
+### Login or create an account at Heroku
+- Make an account in Heroko and login
+
+### Creating an app
+  - Create new app in the top right of the screen and add an app name.
+  - Select region
+  - Then click "create app".
+
+
+### Open settings Tab
+  #### Click on config var
+  - Store CREDS file from gitpod in key and add the values
+  - Store PORT in key and value
+
+  #### Add Buildpacks
+  - Add python buildpack first
+  - Add Nodejs buildpack after that
+  - Add Config Var in Heroku's Settings. Key should be 'Port' and value is '8000'.
+
+ ### Open Deploy Tab
+   #### Choose deployment method
+  - Connect GITHUB
+
+   #### Connect to Github
+  - Choose repositories you want to connect
+  - Click "Connect"
+
+  #### Automatic and Manual deploy
+  - Choose a method to deploy
+
+  #### Final Deployment
+  - Once display button shows up, click it to open it.
+
+### Forking the GitHub Repository
+1. Go to the GitHub repository
+2. Click on Fork button in top right corner
+3. You will then have a copy of the repository in your own GitHub account.
+4. [GitHub Repository](https://github.com/FaisalRD123/python_games)
+
 
 ## Credits
  - To my mentor, Mo Shami regarding the project ideas.
